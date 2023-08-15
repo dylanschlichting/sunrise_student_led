@@ -1,8 +1,10 @@
-# Repository to store code for SUNRISE student cruise paper.
+# sunrise_student_led
+```sunrise_student_led``` is a repository for analysis of TXLA model output used for the 2022 SUNRISE student cruise manuscript. All analysis is done in Python via Jupyter notebooks. To run the notebooks in this repository, an environment can be installed by running 
 
-Analysis code corresponding to the TXLA model may be found under 'TXLA_model'.
-> There are several notebooks so far.
-> - overview_figure.ipynb Makes individual subplots required for the shelf conditions overview figure
-> - heat_budget_diagnostics.ipynb Computes volume-averaged and top 1 m averaged heat budgets with diagnostics from 2010. Not possible with average files because missing a $\kappa_T$, or an offline vertical temperature diffusion coefficient.
-> - ts_diagrams.ipynb Makes TS diagrams for the broader cruise location with model and observational data.
-< - copano.txt are the packages for our (Dylan's) conda environment if you're a python user and wish to recreate our work.
+        conda install --file copano.txt
+## Analysis notebooks (work in progress)
+> There are several notebooks to
+> - Make an overview figure that contains snapshots of ESA Sentinal data for Chlorophyll and sediment concentration on Jul 3, 2022. Likewise, TXLA model salinity, vorticity, and then zoomed in locations of the cruise are provided. Pointwise time series of wind stress and surface currents may also be included. Due to the different aspect ratios, we construct the figure offline using a third party software such as powerpoint. 
+> - Computes a volume-integrated heat budget with diagnostic and average files from 2010 to assess their accuracy.
+> - Compute a volume-integrated heat budget with average files during the 2022 cruise and the associated Ekman buoyancy flux.  
+> - Make TS diagrams with model and observational data to qualitatively assess model skill. Also coded TS diagrams by vertical momentum mixing, or the dissipation of total kinetic energy. 
